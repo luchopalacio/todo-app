@@ -1,0 +1,115 @@
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-content: start;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card.priority-high { border-left: 6px solid #ef4444; }
+.card.priority-medium { border-left: 6px solid #f59e0b; }
+.card.priority-low { border-left: 6px solid #10b981; }
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.card-body {
+    flex: 1;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card-meta {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.card-date,
+.card-project {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: scale(1.1);
+}
+
+.action-btn:nth-child(3):hover { color: #ef4444; background: #fee2e2; }
+.action-btn:nth-child(2):hover { color: #807701; background: #fffacb; } /* Borrar */
+.action-btn:nth-child(1):hover { color: #10b981; background: #d1fae5; } /* Check */
+
+.card.status-done {
+    opacity: 0.6;
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transition: all 0.3s ease;
+}
+
+.card.status-done .card-header {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.card.status-done .-description {
+    font-style: italic;
+    color: #94a3b8;
+}
+
+.card.status-pending:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

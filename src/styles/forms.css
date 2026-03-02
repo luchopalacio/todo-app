@@ -1,0 +1,239 @@
+#task-modal {
+    border: none;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 420px;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.2s ease-out;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#task-modal::backdrop {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#task-form h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+#task-form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+#task-form input,
+#task-form textarea,
+#task-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: #f8fafc;
+}
+
+#task-form textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+#task-form input:focus,
+#task-form textarea:focus,
+#task-form select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#cancel-btn {
+    background: transparent;
+    border: 2px solid #ef4444;
+    color: #ef4444;
+}
+
+#cancel-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+#submit-btn {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+#submit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.form-buttons button:active {
+    transform: scale(0.97);
+}
+
+dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    animation: modalFade 0.2s ease-out;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.confirm-modal {
+    width: 100%;
+    max-width: 380px;
+}
+
+.confirm-container {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.confirm-container p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+#project-modal {
+    width: 100%;
+    max-width: 420px;
+}
+
+#project-modal form {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#project-modal h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#project-modal input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+#project-modal input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.15s ease;
+}
+
+.form-buttons button:first-child {
+    background: #f1f1f1;
+}
+
+.form-buttons button:first-child:hover {
+    background: #e2e2e2;
+}
+
+
+.form-buttons button[type="submit"],
+.form-buttons button:not(.btn-danger):last-child {
+    background: #3b82f6;
+    color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+    background: #2563eb;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
