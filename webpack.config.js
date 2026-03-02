@@ -13,6 +13,7 @@ export default {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/todo-app/'
   },
   devtool: 'inline-source-map',
   plugins: [
