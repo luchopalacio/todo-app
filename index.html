@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do App</title>
+<script defer src="/todo-app/main.js"></script></head>
+<body>
+    <div id="content">
+        <nav id="sidebar">
+            <div class="logo">TO DO...</div>
+
+            <div class="nav-scroll-wrapper">
+                <div class="nav-section">
+                    <div id="open-home" class="nav-item active">
+                        <span>Home</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div id="open-tasks" class="nav-item section-toggle">
+                        <span>My Tasks</span>
+                        <span class="dynamic-arrow"></span>
+                    </div>
+                    <ul id="tasks-menu" class="dropdown hidden">
+                        <li data-filter="today">Today</li>
+                        <li data-filter="week">This week</li>
+                        <li data-filter="month">This month</li>
+                        <li data-filter="all">All</li>
+                        <li data-filter="high">High Priority</li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div id="open-projects" class="nav-item section-toggle">
+                        <span>My Projects</span>
+                        <span class="dynamic-arrow"></span>
+                    </div>
+                    <ul id="projects-list" class="dropdown hidden"> </ul>
+                </div>
+
+                <div id="new-project" class="nav-item">New Project</div>
+            </div>
+
+            <footer class="sidebar-footer">
+                <p>© 2026 Luciano Palacio. All rights reserved.</p>
+            </footer>
+        </nav>
+
+        <main id="main-display">
+            <header id="view-header">
+                    <h1 id="current-view-title">Hey There!</h1>
+                    <div id="header-actions"></div>
+            </header>    
+
+            <section id="cards-container"></section>
+
+        </main>
+
+    </div>
+</body>
+</html>
