@@ -2,7 +2,7 @@
 A dynamic task management application built with Webpack, vanilla JavaScript, HTML, and CSS featuring a clean, modular architecture and persistent data storage.
 
 ## Live Demo
-Soon
+[View Live Demo](https://luchopalacio.github.io/todo-app/) (Hosted in GitHub Pages)
 
 ## Overview
 This project is part of 'The Odin Project' curriculum, specifically from the Todo List assignment. It demonstrates advanced web development concepts including the Module Pattern, separation of concerns (Logic vs. UI), and handling complex application states.
