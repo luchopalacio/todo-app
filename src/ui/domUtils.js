@@ -3,7 +3,7 @@ export function createElement(tag, parent, options = {}) {
 
     if (options.text) element.textContent = options.text;
     
-    // Acepta un string "clase1 clase2" o un array ["clase1", "clase2"]
+    // accepts an string "class1 class2" or an array ["class1", "class2"]
     if (options.className) {
         if (Array.isArray(options.className)) {
             element.classList.add(...options.className);
@@ -18,7 +18,7 @@ export function createElement(tag, parent, options = {}) {
         });
     }
 
-    // Agregar eventos directamente (ej: { click: () => console.log('hola') })
+    // add events (i.e: { click: () => console.log('Task added!') })
     if (options.events) {
         Object.entries(options.events).forEach(([event, handler]) => {
             element.addEventListener(event, handler);
